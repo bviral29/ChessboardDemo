@@ -57,4 +57,21 @@ Excute below commands one by one into the terminal.
 
 > react-native start
 
+
+To run in Android device or simulator execute below command
+
 > react-native run-android
+
+
+To run in iOS device or simulator execute below commands one by one
+
+> cd ios
+
+> npx pods install
+
+
+Make sure that ChessboardDemo.xcworkspace directory should generated after above command.
+
+> cd ..
+
+> react-native run-ios
