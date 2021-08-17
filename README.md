@@ -70,7 +70,7 @@ To run in iOS device or simulator execute below commands one by one
 > npx pods install
 
 
-Make sure that ChessboardDemo.xcworkspace directory should generated after above command.
+Make sure that ChessboardDemo.xcworkspace directory should generated after excuting above command.
 
 > cd ..
 
