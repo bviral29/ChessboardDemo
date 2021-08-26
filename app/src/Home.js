@@ -1,8 +1,9 @@
 // import React from 'react';
 import React from 'react';
-import {FlatList, Image, LogBox, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, LogBox, StyleSheet, View} from 'react-native';
 import SideFlatList from './SideFlatList';
 import Images from '../res/ImageConst/Images';
+import Buttons from './Buttons';
 
 let colorFlag = true;
 let whitesTurn = true;
@@ -64,20 +65,16 @@ export default class Home extends React.Component {
                             justifyContent: 'space-between',
                             padding: 8,
                         }}>
-                            <TouchableOpacity
-                                style={[styles.touchableTextStyle, {backgroundColor: '#FF847C', marginRight: 4}]}
-                                onPress={() => {
-                                    this.resetPieces();
-                                }}>
-                                <Text style={styles.btnTextStyle}>{'Reset'}</Text>
-                            </TouchableOpacity>
-                            <TouchableOpacity
-                                style={[styles.touchableTextStyle, {backgroundColor: '#E84A5F', marginLeft: 4}]}
-                                onPress={() => {
-                                    this.makeRandomMove();
-                                }}>
-                                <Text style={styles.btnTextStyle}>{'Random'}</Text>
-                            </TouchableOpacity>
+                            <Buttons style={[styles.touchableTextStyle, {backgroundColor: '#FF847C', marginRight: 4}]}
+                                     onPress={() => {
+                                         this.resetPieces();
+                                     }} btnText={'Reset'} btnTextStyle={styles.btnTextStyle}>
+                            </Buttons>
+                            <Buttons style={[styles.touchableTextStyle, {backgroundColor: '#E84A5F', marginRight: 4}]}
+                                     onPress={() => {
+                                         this.makeRandomMove();
+                                     }} btnText={'Random'} btnTextStyle={styles.btnTextStyle}>
+                            </Buttons>
                         </View>
                     </View>
                 }
